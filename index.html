@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Apoie o projeto Fé Que Se Pode Ver</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #111827;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    width: 90%;
+    max-width: 520px;
+    text-align: center;
+    background: #1f2937;
+    padding: 35px 25px;
+    border-radius: 18px;
+    box-sizing: border-box;
+}
+
+h1 {
+    margin-top: 0;
+    font-size: 28px;
+}
+
+p {
+    font-size: 17px;
+    line-height: 1.6;
+}
+
+.pix {
+    margin: 25px 0;
+    padding: 15px;
+    background: #111827;
+    border-radius: 10px;
+    word-break: break-all;
+    font-size: 16px;
+}
+
+button {
+    border: none;
+    border-radius: 10px;
+    padding: 14px 25px;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.mensagem {
+    margin-top: 15px;
+    min-height: 24px;
+}
+
+.rodape {
+    margin-top: 25px;
+    font-size: 14px;
+    opacity: 0.8;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>💛 Apoie o projeto<br>Fé Que Se Pode Ver</h1>
+
+<p>
+Se este projeto foi útil para você e deseja contribuir
+para sua continuidade, você pode fazer uma contribuição
+através do PIX.
+</p>
+
+<div class="pix" id="chavePix">
+d8c95fde-6f47-4ce9-ac48-3c73460823c0
+</div>
+
+<button onclick="copiarPix()">COPIAR CHAVE PIX</button>
+
+<div class="mensagem" id="mensagem"></div>
+
+<div class="rodape">
+Fé que se pode ver, porque a verdadeira fé produz frutos.
+</div>
+
+</div>
+
+<script>
+function copiarPix() {
+    const chave = document.getElementById("chavePix").innerText.trim();
+
+    navigator.clipboard.writeText(chave).then(function() {
+        document.getElementById("mensagem").innerText =
+        "✓ Chave PIX copiada!";
+    });
+}
+</script>
+
+</body>
+</html>
